@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fit_bot</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+  <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-dark border-bottom box-shadow">
+    <h5 class="my-0 mr-md-auto font-weight-normal" style="font-family: 'Shrikhand', cursive; color: goldenrod;">   Fitster</h5>
+    <nav class="my-2 my-md-0 mr-md-3">
+      <a class="p-2 text-light" href="http://127.0.0.1:5000/">FitBot</a>
+      <a class="p-2 text-light" href="http://127.0.0.1:5000/">Games</a>
+      <a class="p-2 text-light" href="http://127.0.0.1:5000/">How To Play</a>
+    </nav>
+    <a class="btn btn-outline-primary" href="http://127.0.0.1:5000/">LeaderBoard</a>
+  </div>
+<div id="good" class="good" style="
+margin-left: 10%;
+margin-right: 10%;
+margin-top: 150px;
+">
+    <h1 style="text-align: center;">Fit bot</h1>
+    <form action="/fitbot" method="post">
+        <label for="prompt" style="text-align: center;">prompt</label>
+        <input id="prompt" name="prompt" required><br><br>
+        
+        <input type="submit" value="ask">
+    </form>
+    <br>
+    <form action="/progress" method="post">
+      
+      <input type="submit" value="Check Progress">
+    </form>
+
+    <br>
+    <br>
+    
+    <h2 style="text-align: center;">Result:</h2>
+    <p id="result">{{result}}</p>
+    <h2 style="text-align: center;">Progress:</h2>
+    <p id="progress">{{progress}}</p>
+</div>
+<style>
+    /* Global Styles */
+body {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+header {
+  background-color: #333333;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #ffffff;
+}
+
+/* Container Styles */
+#good {
+  background-color: #222222;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  background-color: #333333;
+  color: #ffffff;
+  border: 1px solid #444444;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #0073e6;
+}
+
+button {
+  background-color: #0073e6;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005bb5;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333333;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Link Styles */
+a {
+  color: #0073e6;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+</style>
+</body>
+</html>
